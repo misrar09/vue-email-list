@@ -9,14 +9,16 @@
     <title>Vue Email List</title>
 </head>
 <body>
+
+    <h1>Random Email List generated from Boolean API</h1>
     <div id="app">
 
         <button @click="randomMails()">Emial List</button>
-        <ol>
+        <ol v-if="listDone">
             <li v-for="email in emailList"> {{email}} </li>
 
         </ol>
-
+    
     </div>
     
 
