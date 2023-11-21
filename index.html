@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/vue@3.3.8/dist/vue.global.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js" integrity="sha512-b94Z6431JyXY14iSXwgzeZurHHRNkLt9d6bAHt7BZT38eqV+GyngIi/tVye4jBKPYQ2lBdRs0glww4fmpuLRwA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js"
+        integrity="sha512-b94Z6431JyXY14iSXwgzeZurHHRNkLt9d6bAHt7BZT38eqV+GyngIi/tVye4jBKPYQ2lBdRs0glww4fmpuLRwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <title>Vue Email List</title>
 </head>
+
 <body>
 
     <h1>Random Email List generated from Boolean API</h1>
     <div id="app">
 
         <button @click="randomMails()">Emial List</button>
-        <ol v-if="listDone">
+        <ol v-if="emailList.length > 9"> <!-- load the list only if emailList is greater than 9 -->
             <li v-for="email in emailList"> {{email}} </li>
-
         </ol>
-    
+
+
     </div>
-    
+
 
     <script src="main.js"></script>
 </body>
+
 </html>
